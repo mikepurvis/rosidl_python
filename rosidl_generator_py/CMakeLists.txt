@@ -92,6 +92,10 @@ if(BUILD_TESTING)
   endif()
 endif()
 
+# Where the extras find this package's executable, Python module and
+# templates: relative to the installed CMake config, or absolute when the
+# config files are installed apart (AMENT_CMAKE_CONFIG_INSTALL_PREFIX).
+ament_package_install_prefix(_install_prefix)
 ament_package(
   CONFIG_EXTRAS "cmake/rosidl_generator_py_get_typesupports.cmake"
     "cmake/register_py.cmake"
